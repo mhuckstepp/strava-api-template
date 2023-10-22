@@ -35,6 +35,7 @@ export type Activity = {
       };
     };
   };
+  // **ONLY if your App has upload media approvals** can be used to upload media to an activity
   media_metadata: {
     [key: string]: {
       [key: string]: {
@@ -52,13 +53,25 @@ export type User = {
   strUserId: string;
   strRefreshToken: string;
   profileImage: string;
+  city: string;
+  state: string;
+  country: string;
 };
 
 export type WebhookRequest = {
   body: {
     object_id: number;
-    aspect_type: string;
+    object_type: string;
+    aspect_type: WebhookAspectType;
     owner_id: number;
+    subscription_id: number;
+    event_time: number;
     updates: { private: string; visibility: string };
   };
 };
+
+enum WebhookAspectType {
+  create = 'create',
+  update = 'update',
+  delete = 'delete',
+}

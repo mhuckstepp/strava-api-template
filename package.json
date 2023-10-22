@@ -6,7 +6,6 @@
   "scripts": {
     "start": "node dist/index.js",
     "build": "react-scripts build && tsc",
-    "dev": "nodemon server/index.js",
     "test": "jest",
     "build:server": "tsc",
     "dev:server": "ts-node-dev --respawn --transpile-only server/index.ts",
@@ -31,8 +30,8 @@
     "jimp": "^0.22.10",
     "mongodb": "4.1",
     "promise-queue": "^2.2.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.1",
     "styled-components": "^5.3.3",
