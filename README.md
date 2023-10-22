@@ -1,4 +1,4 @@
-### This is a template to integrate with the Strava V3 API
+## This is a template to integrate with the Strava V3 API
 
 It is intended to reduce the starting energy to get a third party app started and creating value for Strava users.
 
@@ -25,12 +25,12 @@ It is intended to reduce the starting energy to get a third party app started an
 7. run npm start to run your app locally to make sure everything works as intended
 8. Push to a remote git repo so you can deploy somewhere
 
-## Deploy -
+### Deploy -
 
 I personally recommend using railway.app which costs $5/month to get started and makes everything extremely easy including setting up a production mongodb database.
 Once you have a deployed the service make sure to set your environment variables to the deployed app endpoint
 
-## Architecture -
+### Architecture -
 
 The server folder holds the backend code and is written in typescript.
 The src folder is the frontend react app
