@@ -4,9 +4,9 @@ By following the steps below you can get started with a service that has all the
 
 ## Steps to get started -
 
-1. Sign in to strava.com -> Settings -> My API Application
-2. Set up your app if necessary and retrieve your "Client ID" and "Client Secret"
-3. Create a .env file at the top level of your directory with the following values
+1. Sign in to strava.com -> Settings -> My API Application (https://www.strava.com/settings/api)
+2. Set up your app and retrieve your "Client ID" and "Client Secret"
+3. Create an .env file at the top level of your directory with the following values
 
 ```
    REACT_APP_STRAVA_REDIRECT=http://localhost:3010/auth
@@ -25,7 +25,7 @@ By following the steps below you can get started with a service that has all the
 7. run npm start to run your app locally to make sure everything works as intended
 8. Push to a remote git repo so you can deploy somewhere
 9. Deploy service (recommendation below)
-10. Integrate with your app through your front end. Navigate to your deployed site and go through the auth process with your own account.
+10. Integrate your Strava account with your app through your front end. To do this, navigate to your deployed site and go through the auth process with your own account.
 11. Initiate your webhook to start receiving activities. Make a POST request to `https://www.strava.com/api/v3/push_subscriptions?client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET&callback_url=YOUR_DEPLOYED_APP_URL/stravahook&verify_token=STRAVA_SUBSCRIBE_TOKEN`
 
 ### Deploy -
@@ -35,6 +35,8 @@ Once you have a deployed the service make sure to set your environment variables
 
 ### Architecture -
 
-The `server` folder holds the backend code and is written in typescript. <br />  The `src` folder holds the frontend react app code
+This is set up as a monolith (backend and frontend in one repo) for simplicity. <br /> The `server` folder holds the backend code and is written in typescript. <br />  The `src` folder holds the frontend react app code
+<br /> The compiled code for the server is outputted to `dist` and the React App code is outputted to `build`
 
-
+### Scripts -
+This project uses Typescript on the backend to help define what you can access from Strava activities. Because of this and the fact the project is a monolith, it adds some complexity to the scripts in `package.json`
