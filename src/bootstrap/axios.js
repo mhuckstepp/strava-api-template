@@ -1,6 +1,10 @@
 import axios from 'axios';
+import { CONSTANTS } from './constants';
+
+const URL =
+  process.env.NODE_ENV === 'development' ? 'localhost:3010' : CONSTANTS.APP_URL;
 
 export const axiosCodeClient = axios.create({
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: `${URL}/users`,
   method: 'post',
 });

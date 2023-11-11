@@ -9,9 +9,6 @@ By following the steps below you can get started with a service that has all the
 3. Create an .env file at the top level of your directory with the following values
 
 ```
-   REACT_APP_STRAVA_REDIRECT=http://localhost:3010/auth
-   REACT_APP_CLIENT_ID=REPLACE_WITH_STRAVA_CLIENT_ID
-   REACT_APP_API_URL=http://localhost:3010/users
    STRAVA_CLIENT_ID=REPLACE_WITH_STRAVA_CLIENT_ID
    STRAVA_CLIENT_SECRET=REPLACE_WITH_STRAVA_CLIENT_SECRET
    STRAVA_SUBSCRIBE_TOKEN=REPLACE_WITH_STRAVA_SUBSCRIBE_TOKEN_CAN_BE_ANYTHING
